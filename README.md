@@ -2,6 +2,10 @@
 
 This is a list of common questions we frequently encounter in our [slack](https://preact-slack.now.sh/) channel.
 
+## How do I upgrade to Preact X?
+
+Check out [this guide](./migrate-to-x.md).
+
 ## I'm seeing weird `$$typeof` properties on all objects with Preact X
 
 This happens because the internal shape for `vnodes` (the data structure we use to compare components)
