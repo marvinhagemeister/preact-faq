@@ -35,7 +35,7 @@ npm remove preact-compat
 
 To guarantee a stable ecosystem for our users (especially for our enterprise users)
 we've put Preact X related libraries behind a `tag`.
-If you're using `preact-render-to-string` we need to update it to the version
+If you're using `preact-render-to-string` you need to update it to the version
 that works with X.
 
 | Library                   | Preact 8.x | Preact X |
