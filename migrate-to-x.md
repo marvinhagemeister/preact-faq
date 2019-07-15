@@ -52,8 +52,8 @@ you need to change one character: `preact-compat` -> `preact/compat`.
 
 #### Aliasing in `preact-cli`
 
-This is done automatically for you. Just the upcoming version that will be
-tagged as stable once Preact X is marked as stable:
+This is done automatically for you. Use the upcoming version that will be
+tagged as stable once Preact X is released:
 
 ```bash
 npm install preact-cli@rc
