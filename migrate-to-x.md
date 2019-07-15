@@ -48,8 +48,14 @@ that works with X.
 
 ### Setting up aliases
 
+To make third-party react libraries work with Preact we ship a **compat**ibility layer that can be imported via `preact/compat`.
 This is pretty much the same as for Preact 8.x with the notable exception that
-you need to change one character: `preact-compat` -> `preact/compat`.
+you need to change one character: `preact-compat` -> `preact/compat` (note the slash).
+
+Be careful not to introduce any spelling errors here. A common one seems
+to be to write `compact` instead of `compat`. If you're having trouble
+with that, think of `compat` as the `compatibility` layer for react.
+That's where the name is coming from.
 
 #### Aliasing in `preact-cli`
 
