@@ -233,6 +233,18 @@ this.setState(prevState => {
 
 _Note: We're currently investigating if we can make this easier by shipping a `LegacyComponent` which has the old behaviour._
 
+### `dangerouslySetInnerHTML` will skip diffing of children
+
+When a `vnode` has the property `dangerouslySetInnerHTML` set Preact will
+skip diffing the `vnode's` children.
+
+```js
+<div dangerouslySetInnerHTML="foo">
+  <span>I will be skipped</span>
+  <p>So do I</p>
+</div>
+```
+
 ## Notes for library authors
 
 This section is intended for library authors who are maintaing packages
