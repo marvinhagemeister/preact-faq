@@ -7,10 +7,11 @@ much improved compatibility with the react ecosystem. We tried to keep any
 breaking changes to the minimum possible, but couldn't eliminate all of them
 completely without comprimising on our Feature set. This document is intended
 to guide you through upgrading an existing Preact 8.x application to Preact X
-and is divided in 2 main sections
+and is divided in 3 main sections
 
 - [Upgrading dependencies](#Upgrading-dependencies)
 - [Getting your code ready](#Getting-your-code-ready)
+- [Notes for library authors](#Notes-for-library-authors)
 
 ## Upgrading dependencies
 
@@ -225,3 +226,44 @@ this.setState(prevState => {
 ```
 
 _Note: We're currently investigating if we can make this easier by shipping a `LegacyComponent` which has the old behaviour._
+
+## Notes for library authors
+
+This section is intended for library authors who are maintaing packages
+to be used with Preact X. You can safely skip this section if you're not
+writing one.
+
+### The `VNode` shape has changed
+
+We renamed/moved the following properties:
+
+- `attributes` -> `props`
+- `nodeName` -> `type`
+- `children` -> `props.children`
+
+As much as we tried, we always ran into edge-cases with third-party libraries
+written for react. This change to our `vnode` shape removed many
+difficult to spot bugs and makes our `compat` code a lot cleaner.
+
+### Adjacent text nodes are not joined anymore
+
+In Preact 8.x we had this feature where we would join adjacent text
+notes as an optimization. This doesn't hold true for X anymore because
+we're not diffing directly against the dom anymore. In fact we noticed
+that it hurt performance in X which is why we removed it. Take the
+following example:
+
+```jsx
+// Preact 8.x
+console.log(<div>foo{"bar"}</div>);
+// Logs a structure like this:
+//   div
+//     text
+
+// Preact X
+console.log(<div>foo{"bar"}</div>);
+// Logs a structure like this:
+//   div
+//     text
+//     text
+```
