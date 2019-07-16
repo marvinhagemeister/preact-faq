@@ -150,6 +150,13 @@ Preact 8.x only worked up to `styled-components@3.x`. With Preact X this barrier
 is no more and we work with the latest version of `styled-components`. Make sure
 that you've [aliased react to preact](#setting-up-aliases) correctly.
 
+#### `preact-portal`
+
+The `Portal` component is now part of `preact/compat`.
+
+1. Remove `preact-portal`
+2. Import `createPortal` from `mobx-react`
+
 ## Getting your code ready
 
 ### Using named exports
