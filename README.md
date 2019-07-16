@@ -26,7 +26,7 @@ function Foo() {
     fetch("/my-api")
       .then(res => res.json())
       .then(res => setData(res));
-  });
+  }, []);
 
   return data === null ? "not loaded" : data;
 }
