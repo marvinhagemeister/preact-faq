@@ -238,7 +238,7 @@ _Note: We're currently investigating if we can make this easier by shipping a `L
 When a `vnode` has the property `dangerouslySetInnerHTML` set Preact will
 skip diffing the `vnode's` children.
 
-```js
+```jsx
 <div dangerouslySetInnerHTML="foo">
   <span>I will be skipped</span>
   <p>So do I</p>
