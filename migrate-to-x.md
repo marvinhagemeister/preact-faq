@@ -43,6 +43,7 @@ that works with X.
 | `preact-render-to-string` | 4.x        | 5.x      |
 | `preact-router`           | 2.x        | 3.x      |
 | `preact-jsx-chai`         | 2.x        | 3.x      |
+| `preact-markup`           | 1.x        | 2.x      |
 
 **All libraries for X can be installed via the `next` tag. For example: `npm install preact-router@next`**
 
