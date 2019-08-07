@@ -155,7 +155,7 @@ that you've [aliased react to preact](#setting-up-aliases) correctly.
 The `Portal` component is now part of `preact/compat`.
 
 1. Remove `preact-portal`
-2. Import `createPortal` from `mobx-react`
+2. Import `createPortal` from `preact/compat`
 
 ## Getting your code ready
 
