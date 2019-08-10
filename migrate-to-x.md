@@ -129,7 +129,7 @@ but you may encounter one where this is not the case.
 
 `preact-redux` is one of such libraries that hasn't been updated yet. The good
 news is that `preact/compat` is much more React-compliant and works out of the
-box with the react bindings called `react-redux`. Switching to it will resolve
+box with the React bindings called `react-redux`. Switching to it will resolve
 the situation. Make sure that you've aliased `react` and `react-dom` to
 `preact/compat` in your bundler.
 
